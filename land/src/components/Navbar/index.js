@@ -1,13 +1,15 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import Aplogo from './Aplogo.png'
+
 
 function Navbar() {
   return (
-    <nav class="navbar bg-body-primary bg-primary">
+    <nav class="navbar bg-body-success bg-success">
     <div class="container">
-        <div className='d-flex align-items-center'> 
+        <div className='d-flex align-items-center justify-content-start'> 
         <a class="navbar-brand" href="#">
-        <h3 className='text-white text-center'>Land Allotment</h3>
+        <h3 className='text-white text-center'><span><img src={Aplogo} width="100" height="70"  alt="" /></span>
+        Land Allotment</h3>
         </a>
         </div>
         <div>
