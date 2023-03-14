@@ -1,31 +1,82 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Chart from '../Chart'
+import "./index.css"
 
-import './index.css'
-import land from './land.jpg'
-import urban from './urban.jpeg'
-import farm from './farm.jpg'
+const data = [
+  {
+    count: 809680,
+    language: "WaitingList",
+  },
+  {
+    count: 4555697,
+    language: "Sold",
+  },
+  {
+    count: 12345657,
+    language: "Brought",
+  },
+]
 
-function Login() {
+const data1 = [
+  {
+    count:12345657,
+    language: "Urban",
+  },
+  {
+    count: 809680,
+    language: "Commercial",
+  },
+  {
+    count: 4555697,
+    language: "Farms",
+  },
+]
+
+function Home() {
   return (
-    <>
-       <div className='d-flex flex-row justify-content-center login-background'>
-        <form className='d-flex flex-column mt-3 p-3 mb-2 bg-transparent text-dark'>
-            <label htmlFor='username' className='fs-6'>Username
-            </label>
-            <input id="username"  type="text"   placeholder='username' Required/>
-            <br/> 
-            <label>Password
-            </label>
-            <input id="password"  type="password" Required placeholder='password'/> 
-            <br/>
-            <div>
-            <Link to="/"><button type='submit' className='btn btn-primary'>Submit</button></Link>
+    <div className='Home-background'>
+      <h1 className='fsc-bold'>Welcome Eentrepreneur</h1>
+      <div className='d-flex flex-wrap justify-content-center'>
+        <Chart data={data}/>
+        <Chart data={data1}/>
+      </div>
+      <div className='d-flex flex-row justify-content-around'>
+        <div>
+        <h1 className='text-white fsc-bold'>Apply for Land Allotment here.</h1>
+        <p className='text-white fsc-bold'>After Initial registration, Entrepreneur fills basic
+                details and clicks on link <br/>“Apply land allotment
+                from APIIC” and system redirects to APIIC
+                application
+        </p>
+        </div>
+        <form>
+            <div className="mb-3">
+                <label for="exampleInputEmail1" className="form-label text-white fsc-bold">Email address</label>
+                <input type="email" required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <div id="emailHelp" className="form-text text-white fsc-bold">We'll never share your email with anyone else.</div>
             </div>
+            <div className="mb-3">
+                <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Organisation</label>
+                <input type="text" required  className="form-control" id="exampleInputPassword1"/>
+            </div>
+            <div className="mb-3">
+                <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Role</label>
+                <input type="text" required className="form-control" id="exampleInputPassword1"/>
+            </div>
+            <div className="mb-3">
+                <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Income</label>
+                <input type="number" required className="form-control" id="exampleInputPassword1"/>
+            </div>
+            <div className="mb-3 form-check">
+                <input type="checkbox" required className="form-check-input text-white fsc-bold" id="exampleCheck1"/>
+                <label className="form-check-label text-white fsc-bold" for="exampleCheck1">Agree for terms*</label>
+            </div>
+            <Link to="/Uploads"><button type="submit" className="btn btn-primary">Apply</button></Link>
         </form>
-       </div>
-    </>
+      </div>
+    </div>
   )
 }
 
-export default Login
+export default Home
