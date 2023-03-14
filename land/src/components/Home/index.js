@@ -26,18 +26,18 @@ function Home() {
             </div>
             <div className="mb-3">
                 <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Organisation</label>
-                <input type="text" className="form-control" id="exampleInputPassword1"/>
+                <input type="text" required  className="form-control" id="exampleInputPassword1"/>
             </div>
             <div className="mb-3">
                 <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Role</label>
-                <input type="text" className="form-control" id="exampleInputPassword1"/>
+                <input type="text" required className="form-control" id="exampleInputPassword1"/>
             </div>
             <div className="mb-3">
                 <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Income</label>
-                <input type="number" className="form-control" id="exampleInputPassword1"/>
+                <input type="number" required className="form-control" id="exampleInputPassword1"/>
             </div>
             <div className="mb-3 form-check">
-                <input type="checkbox" className="form-check-input text-white fsc-bold" id="exampleCheck1"/>
+                <input type="checkbox" required className="form-check-input text-white fsc-bold" id="exampleCheck1"/>
                 <label className="form-check-label text-white fsc-bold" for="exampleCheck1">Agree for terms*</label>
             </div>
             <button type="submit" className="btn btn-primary">Apply</button>
