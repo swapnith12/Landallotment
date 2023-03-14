@@ -12,11 +12,11 @@ function Login() {
         <form className='d-flex flex-column mt-3 p-3 mb-2 bg-transparent text-dark'>
             <label htmlFor='username' className='fs-6'>Username
             </label>
-            <input id="username" type="text" placeholder='username'/>
+            <input id="username"  type="text"   placeholder='username' Required/>
             <br/> 
             <label>Password
             </label>
-            <input id="password" type="password" placeholder='password'/> 
+            <input id="password"  type="password" Required placeholder='password'/> 
             <br/>
             <div>
             <button type='submit' className='btn btn-primary'>Submit</button>
