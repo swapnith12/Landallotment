@@ -36,7 +36,7 @@ const data1 = [
 function Home() {
   return (
     <div className='Home-background'>
-      <h1 className='fsc-bold'>Welcome Eentrepreneur</h1>
+      <h1 className='fsc-bold'>Welcome Entrepreneur</h1>
       <div className='d-flex flex-wrap justify-content-center'>
         <Chart data={data}/>
         <Chart data={data1}/>
