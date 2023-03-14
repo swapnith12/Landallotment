@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import "./index.css"
 
 function DetailsUpload() {
@@ -22,7 +23,7 @@ function DetailsUpload() {
             <label className="input-group-text" for="inputGroupFile02">Upload</label>
           </div>
           <div>
-            <button type="submit" className='btn btn-primary'>Submit</button>
+            <Link to="/"><button type="submit" className='btn btn-primary'>Submit</button></Link>
           </div>
       </div>
     </div>

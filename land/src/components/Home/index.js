@@ -1,13 +1,45 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Chart from '../Chart'
 import "./index.css"
+
+const data = [
+  {
+    count: 809680,
+    language: "WaitingList",
+  },
+  {
+    count: 4555697,
+    language: "Sold",
+  },
+  {
+    count: 12345657,
+    language: "Brought",
+  },
+]
+
+const data1 = [
+  {
+    count:12345657,
+    language: "Urban",
+  },
+  {
+    count: 809680,
+    language: "Commercial",
+  },
+  {
+    count: 4555697,
+    language: "Farms",
+  },
+]
 
 function Home() {
   return (
     <div className='Home-background'>
       <h1 className='fsc-bold'>Welcome Eentrepreneur</h1>
-      <div className='d-flex justify-content-center'>
-      <Chart/>
+      <div className='d-flex flex-wrap justify-content-center'>
+        <Chart data={data}/>
+        <Chart data={data1}/>
       </div>
       <div className='d-flex flex-row justify-content-between'>
         <div>
@@ -40,7 +72,7 @@ function Home() {
                 <input type="checkbox" required className="form-check-input text-white fsc-bold" id="exampleCheck1"/>
                 <label className="form-check-label text-white fsc-bold" for="exampleCheck1">Agree for terms*</label>
             </div>
-            <button type="submit" className="btn btn-primary">Apply</button>
+            <Link to="/Uploads"><button type="submit" className="btn btn-primary">Apply</button></Link>
         </form>
       </div>
     </div>

@@ -1,37 +1,24 @@
 import { PieChart, Pie, Legend, Cell, ResponsiveContainer } from "recharts"
 
-const data = [
-  {
-    count: 809680,
-    language: "Telugu",
-  },
-  {
-    count: 4555697,
-    language: "Hindi",
-  },
-  {
-    count: 12345657,
-    language: "English",
-  },
-]
 
-const Chart = () => {
+
+const Chart = (props) => {
   return (
-    <ResponsiveContainer width="50%" height={300}>
+    <ResponsiveContainer width="40%" height={300}>
       <PieChart>
         <Pie
           cx="70%"
           cy="40%"
-          data={data}
+          data={props.data}
           startAngle={0}
           endAngle={360}
           innerRadius="40%"
           outerRadius="70%"
           dataKey="count"
         >
-          <Cell name="WaitingList" fill="#fecba6" />
-          <Cell name="Sold" fill="#b3d23f" />
-          <Cell name="Brought" fill="#a44c9e" />
+          <Cell name={props.data[0].language} fill="#fecba6" />
+          <Cell name={props.data[1].language} fill="#b3d23f" />
+          <Cell name={props.data[2].language} fill="#a44c9e" />
         </Pie>
         <Legend
           iconType="circle"
