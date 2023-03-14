@@ -41,7 +41,7 @@ function Home() {
         <Chart data={data}/>
         <Chart data={data1}/>
       </div>
-      <div className='d-flex flex-row justify-content-between'>
+      <div className='d-flex flex-row justify-content-around'>
         <div>
         <h1 className='text-white fsc-bold'>Apply for Land Allotment here.</h1>
         <p className='text-white fsc-bold'>After Initial registration, Entrepreneur fills basic
@@ -54,7 +54,7 @@ function Home() {
             <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label text-white fsc-bold">Email address</label>
                 <input type="email" required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                <div id="emailHelp" className="form-text text-white fsc-bold">We'll never share your email with anyone else.</div>
             </div>
             <div className="mb-3">
                 <label for="exampleInputPassword1" className="form-label text-white fsc-bold">Organisation</label>
